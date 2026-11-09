@@ -1,0 +1,191 @@
+[
+  {
+    "source_id": "gpu025-demo",
+    "device": "gpu025-demo",
+    "root": "/synthetic/demo/gpu",
+    "directory": "QER/run-a",
+    "run_ids": [
+      "qer-001"
+    ],
+    "roles": {
+      "config": [
+        "QER/run-a/config.json"
+      ],
+      "log": [
+        "QER/run-a/train.log"
+      ],
+      "result": [
+        "QER/run-a/result.json"
+      ],
+      "weight": [
+        "QER/run-a/model.pt"
+      ]
+    },
+    "evidence": [
+      {
+        "path": "QER/run-a/config.json",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "config",
+        "indexed_at": "2026-11-09T11:52:37.880866+00:00",
+        "status": "observed",
+        "parse_state": "parsed"
+      },
+      {
+        "path": "QER/run-a/model.pt",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "weight",
+        "indexed_at": "2026-11-09T11:52:37.880899+00:00",
+        "status": "observed",
+        "parse_state": "outside_policy"
+      },
+      {
+        "path": "QER/run-a/result.json",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "result",
+        "indexed_at": "2026-11-09T11:52:37.880923+00:00",
+        "status": "observed",
+        "parse_state": "parsed"
+      },
+      {
+        "path": "QER/run-a/train.log",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "log",
+        "indexed_at": "2026-11-09T11:52:37.880967+00:00",
+        "status": "observed",
+        "parse_state": "parsed"
+      }
+    ],
+    "explicit_links": [
+      {
+        "from": "QER/run-a/config.json",
+        "run_id": "qer-001",
+        "evidence": "受限文本显式 run_id"
+      },
+      {
+        "from": "QER/run-a/config.json",
+        "to": "QER/run-a/result.json",
+        "key": "result",
+        "evidence": "受限文本相对路径引用",
+        "state": "indexed",
+        "target_status": "observed"
+      },
+      {
+        "from": "QER/run-a/config.json",
+        "to": "QER/run-a/model.pt",
+        "key": "weight",
+        "evidence": "受限文本相对路径引用",
+        "state": "indexed",
+        "target_status": "observed"
+      },
+      {
+        "from": "QER/run-a/result.json",
+        "run_id": "qer-001",
+        "evidence": "受限文本显式 run_id"
+      },
+      {
+        "from": "QER/run-a/train.log",
+        "run_id": "qer-001",
+        "evidence": "受限文本显式 run_id"
+      }
+    ],
+    "ambiguities": [
+      "重复 run_id qer-001 出现在多个来源/目录"
+    ],
+    "missing_roles": [],
+    "source_status": "complete",
+    "last_scan": "2026-11-09T11:52:37.879119+00:00",
+    "availability": "unknown_remote",
+    "note": "目录候选与显式引用分开列示；权重保留价值待人工判断"
+  },
+  {
+    "source_id": "gpu025-demo",
+    "device": "gpu025-demo",
+    "root": "/synthetic/demo/gpu",
+    "directory": "QER/run-b",
+    "run_ids": [
+      "qer-001",
+      "qer-alt"
+    ],
+    "roles": {
+      "config": [
+        "QER/run-b/config-extra.toml",
+        "QER/run-b/config.json"
+      ],
+      "log": [],
+      "result": [],
+      "weight": [
+        "QER/run-b/epoch-2.pt",
+        "QER/run-b/model.pt"
+      ]
+    },
+    "evidence": [
+      {
+        "path": "QER/run-b/config-extra.toml",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "config",
+        "indexed_at": "2026-11-09T11:52:37.880649+00:00",
+        "status": "observed",
+        "parse_state": "parsed"
+      },
+      {
+        "path": "QER/run-b/config.json",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "config",
+        "indexed_at": "2026-11-09T11:52:37.880736+00:00",
+        "status": "observed",
+        "parse_state": "parsed"
+      },
+      {
+        "path": "QER/run-b/epoch-2.pt",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "weight",
+        "indexed_at": "2026-11-09T11:52:37.880773+00:00",
+        "status": "observed",
+        "parse_state": "outside_policy"
+      },
+      {
+        "path": "QER/run-b/model.pt",
+        "basis": "同目录或其子目录的命名角色候选",
+        "role": "weight",
+        "indexed_at": "2026-11-09T11:52:37.880798+00:00",
+        "status": "observed",
+        "parse_state": "outside_policy"
+      }
+    ],
+    "explicit_links": [
+      {
+        "from": "QER/run-b/config-extra.toml",
+        "run_id": "qer-alt",
+        "evidence": "受限文本显式 run_id"
+      },
+      {
+        "from": "QER/run-b/config.json",
+        "run_id": "qer-001",
+        "evidence": "受限文本显式 run_id"
+      },
+      {
+        "from": "QER/run-b/config.json",
+        "to": "QER/run-b/missing.json",
+        "key": "result",
+        "evidence": "受限文本相对路径引用",
+        "state": "not_indexed_or_missing",
+        "target_status": "unknown"
+      }
+    ],
+    "ambiguities": [
+      "引用未确认 QER/run-b/config.json → QER/run-b/missing.json (not_indexed_or_missing)",
+      "同目录多个 run_id，保持歧义",
+      "多个 config 候选，未强行配对",
+      "多个 weight 候选，未强行配对",
+      "重复 run_id qer-001 出现在多个来源/目录"
+    ],
+    "missing_roles": [
+      "log",
+      "result"
+    ],
+    "source_status": "complete",
+    "last_scan": "2026-11-09T11:52:37.879119+00:00",
+    "availability": "unknown_remote",
+    "note": "目录候选与显式引用分开列示；权重保留价值待人工判断"
+  }
+]

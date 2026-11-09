@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.demo/
+.state/
+*.sqlite*
+*.db*
+# Historical personal planning documents stay local.
+/AGENT任务书-MVP与迭代开发.md
+/产品需求基线-v0.2.md
+/需求研读与讨论记录.md
+/fnos-deepseek-data-agent-spec-v0.1.md

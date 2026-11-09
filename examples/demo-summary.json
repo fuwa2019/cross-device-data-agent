@@ -1,0 +1,300 @@
+{
+  "environment": {
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64",
+    "python": "3.13.18"
+  },
+  "synthetic_sources": 2,
+  "regular_files_per_source": 13,
+  "indexed_file_paths_total": 26,
+  "experiment_directories": 2,
+  "commands": [
+    {
+      "arguments": [
+        "scan",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "mac-demo",
+        "--root",
+        "DEMO_ROOT/mac",
+        "--exclude",
+        "excluded",
+        "--config",
+        "DEMO_ROOT/parse.toml"
+      ],
+      "exit_code": 0,
+      "seconds": 0.039784
+    },
+    {
+      "arguments": [
+        "scan",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "mac-demo",
+        "--root",
+        "DEMO_ROOT/mac",
+        "--exclude",
+        "excluded",
+        "--config",
+        "DEMO_ROOT/parse.toml"
+      ],
+      "exit_code": 0,
+      "seconds": 0.041801
+    },
+    {
+      "arguments": [
+        "export",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "mac-demo",
+        "--format",
+        "json",
+        "--output",
+        "DEMO_ROOT/mac-demo.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036188
+    },
+    {
+      "arguments": [
+        "scan",
+        "--state-dir",
+        "DEMO_ROOT/remote-state",
+        "--source",
+        "gpu025-demo",
+        "--root",
+        "DEMO_ROOT/gpu",
+        "--exclude",
+        "excluded",
+        "--config",
+        "DEMO_ROOT/parse.toml"
+      ],
+      "exit_code": 0,
+      "seconds": 0.038694
+    },
+    {
+      "arguments": [
+        "scan",
+        "--state-dir",
+        "DEMO_ROOT/remote-state",
+        "--source",
+        "gpu025-demo",
+        "--root",
+        "DEMO_ROOT/gpu",
+        "--exclude",
+        "excluded",
+        "--config",
+        "DEMO_ROOT/parse.toml"
+      ],
+      "exit_code": 0,
+      "seconds": 0.038067
+    },
+    {
+      "arguments": [
+        "export",
+        "--state-dir",
+        "DEMO_ROOT/remote-state",
+        "--source",
+        "gpu025-demo",
+        "--format",
+        "json",
+        "--output",
+        "DEMO_ROOT/gpu025-demo.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036074
+    },
+    {
+      "arguments": [
+        "export",
+        "--state-dir",
+        "DEMO_ROOT/remote-state",
+        "--source",
+        "gpu025-demo",
+        "--format",
+        "jsonl",
+        "--output",
+        "DEMO_ROOT/gpu.jsonl"
+      ],
+      "exit_code": 0,
+      "seconds": 0.035503
+    },
+    {
+      "arguments": [
+        "import",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--input",
+        "DEMO_ROOT/gpu.jsonl",
+        "--input-format",
+        "jsonl"
+      ],
+      "exit_code": 0,
+      "seconds": 0.039888
+    },
+    {
+      "arguments": [
+        "import",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--input",
+        "DEMO_ROOT/gpu025-demo.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.034834
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--category",
+        "statement",
+        "--year",
+        "2025"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033637
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--query",
+        "QER",
+        "--source",
+        "gpu025-demo"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036796
+    },
+    {
+      "arguments": [
+        "stats",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--group-by",
+        "source"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033618
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--query",
+        "not-present"
+      ],
+      "exit_code": 4,
+      "seconds": 0.032602
+    },
+    {
+      "arguments": [
+        "experiments",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "gpu025-demo",
+        "--format",
+        "markdown",
+        "--output",
+        "DEMO_ROOT/experiments.md"
+      ],
+      "exit_code": 0,
+      "seconds": 0.034575
+    },
+    {
+      "arguments": [
+        "experiments",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "gpu025-demo"
+      ],
+      "exit_code": 0,
+      "seconds": 0.041368
+    },
+    {
+      "arguments": [
+        "scan",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "mac-demo",
+        "--root",
+        "DEMO_ROOT/mac"
+      ],
+      "exit_code": 1,
+      "seconds": 0.036428
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "mac-demo",
+        "--query",
+        "月结单"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03387
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--source",
+        "gpu025-demo",
+        "--check-access"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033768
+    },
+    {
+      "arguments": [
+        "export",
+        "--state-dir",
+        "DEMO_ROOT/local-state",
+        "--format",
+        "json",
+        "--output",
+        "DEMO_ROOT/combined.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036126
+    },
+    {
+      "arguments": [
+        "import",
+        "--state-dir",
+        "DEMO_ROOT/fresh-state",
+        "--input",
+        "DEMO_ROOT/combined.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036169
+    },
+    {
+      "arguments": [
+        "search",
+        "--state-dir",
+        "DEMO_ROOT/fresh-state",
+        "--query",
+        "月结单"
+      ],
+      "exit_code": 0,
+      "seconds": 0.034273
+    }
+  ],
+  "total_seconds": 0.773078,
+  "real_device_validation": "未进行"
+}

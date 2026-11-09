@@ -1,0 +1,19 @@
+# Paths are relative to this config. Replace with an explicitly authorized root.
+[sources.mac-demo]
+root = "../.demo/mac"
+device = "mac-demo"
+exclude = [".git", "excluded", "*.tmp"]
+tags = ["demo"]
+
+[sources.gpu025-demo]
+root = "../.demo/gpu"
+device = "gpu025-demo"
+exclude = ["excluded"]
+tags = ["research"]
+
+# Optional bounded parsing is implemented in M3 and disabled by default.
+[parse]
+enabled = false
+paths = ["QER/*"]
+extensions = [".json", ".toml", ".log"]
+max_bytes = 65536
